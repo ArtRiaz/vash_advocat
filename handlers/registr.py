@@ -5,6 +5,8 @@ from aiogram import types, Dispatcher
 from create_bot import dp, bot
 from aiogram.dispatcher.filters import Text
 from keyboards.reply import kb_menu, get_kb_menu, get_back
+from aiogram.types import CallbackQuery
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 
 class RoomOrder(StatesGroup):
@@ -13,6 +15,10 @@ class RoomOrder(StatesGroup):
     email = State()
     comentariy = State()
 
+
+async def order_middle(callback: CallbackQuery):
+    await callback.bot.send_message(chat_id=callback.from_user.id, text="Заповнить будь ласка форму для регістраціі:",
+                                    reply_markup=ReplyKeyboardMarkup(resize_keyboard=True).add(KeyboardButton("Замовити консультацію")))
 
 async def order_start(message: types.Message):
     await RoomOrder.name.set()
@@ -52,10 +58,10 @@ async def get_coment(message: types.Message, state: FSMContext):
 
         await bot.send_message(chat_id=message.from_user.id, text=f"Ваша запис пройшов успішно! Я з вами зв'яжусь "
                                                                   f"найблищим часом\n"
-                                                                  f" Ваше ім'я:{name}\n"
-                                                                  f" Ваш номер телефону:{phone}\n"
-                                                                  f"Ваш e-mail:{email}\n"
-                                                                  f"Коментар:{com}",
+                                                                  f" Ваше ім'я: {name}\n"
+                                                                  f" Ваш номер телефону: {phone}\n"
+                                                                  f"Ваш e-mail: {email}\n"
+                                                                  f"Коментар: {com}",
                                reply_markup=get_back())
         await state.finish()
 
@@ -66,3 +72,4 @@ def handlers_form(dp: Dispatcher):
     dp.register_message_handler(get_phone, state=RoomOrder.phone)
     dp.register_message_handler(get_email, state=RoomOrder.email)
     dp.register_message_handler(get_coment, state=RoomOrder.comentariy)
+    dp.register_callback_query_handler(order_middle, text="order")

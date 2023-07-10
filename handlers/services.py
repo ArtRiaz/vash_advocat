@@ -4,6 +4,8 @@ from create_bot import dp, bot
 from aiogram.dispatcher.filters import Text
 import asyncio
 from keyboards.reply import get_back
+from keyboards.inline_question import order
+
 
 async def service(messsage: types.Message):
     with open('reu.jpg', 'rb') as photo:
@@ -22,7 +24,7 @@ async def service(messsage: types.Message):
 async def for_people(callback: CallbackQuery):
     await callback.message.answer("<b>Трудові суперечки</b>\n"
                                   "\n"
-                                  "Допоможу вам отримати компетентну юридичну консультацію з питань трудового права.")
+                                  "Допоможу вам отримати компетентну юридичну консультацію з питань трудового права.", reply_markup=get_back())
     await asyncio.sleep(2)
     await callback.message.answer("<b>Захист прав споживачів</b>\n"
                                   "\n"
@@ -60,7 +62,8 @@ async def for_people(callback: CallbackQuery):
                                   "Допомагаю вирішити різні питання, пов'язані зі спадщиною, включаючи складні "
                                   "ситуації з поділом майна між "
                                   "спадкоємцями, суперечки між ними, визнання дійсності заповіту або його оскарження, "
-                                  "а також питання, пов'язані з правом на отримання спадщини.", reply_markup=get_back())
+                                  "а також питання, пов'язані з правом на отримання спадщини.",
+                                  reply_markup=order())
 
 
 """for phisic"""
@@ -111,7 +114,7 @@ async def for_phisic(callback: CallbackQuery):
                                   "\n"
                                   "Розглядаю питання, пов'язані з реєстрацієй, змінами, ліквідацієй та банкрутством "
                                   "приватних підприємств. Звертайтесь "
-                                  "для отримання професійної консультації та підтримки.", reply_markup=get_back())
+                                  "для отримання професійної консультації та підтримки.", reply_markup=order())
 
 
 def register_service(dp: Dispatcher):

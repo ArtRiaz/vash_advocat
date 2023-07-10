@@ -8,7 +8,7 @@ def ikb_contact():
         InlineKeyboardButton('Геолокація', callback_data='Геолокация')
     ], [
         InlineKeyboardButton('Контактний номер', callback_data='Вызов')
-     ]])
+    ]])
 
     return ikb
 
@@ -30,6 +30,14 @@ def ikb_question():
 def back_quest():
     ikb = InlineKeyboardMarkup(inline_keyboard=[[
         InlineKeyboardButton('Назад', callback_data="cancel")
+    ]])
+
+    return ikb
+
+
+def order():
+    ikb = InlineKeyboardMarkup(inline_keyboard=[[
+        InlineKeyboardButton('Замовити консультацію', callback_data="order")
     ]])
 
     return ikb

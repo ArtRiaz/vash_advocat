@@ -19,9 +19,6 @@ async def cmd_menu(message: types.Message):
     await message.answer('Управління меню', reply_markup=get_kb_menu())
 
 
-
-
 def register_handlers_start(dp: Dispatcher):
     dp.register_message_handler(cmd_start, commands=['start'])
     dp.register_message_handler(cmd_menu, Text(equals='Меню'))
-
