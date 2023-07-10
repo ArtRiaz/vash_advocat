@@ -54,7 +54,7 @@ async def get_coment(message: types.Message, state: FSMContext):
                                                                   f"найблищим часом\n"
                                                                   f" Ваше ім'я:{name}\n"
                                                                   f" Ваш номер телефону:{phone}\n"
-                                                                  f"Ваш e- mail:{email}\n"
+                                                                  f"Ваш e-mail:{email}\n"
                                                                   f"Коментар:{com}",
                                reply_markup=get_back())
         await state.finish()
