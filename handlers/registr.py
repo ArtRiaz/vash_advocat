@@ -18,7 +18,9 @@ class RoomOrder(StatesGroup):
 
 async def order_middle(callback: CallbackQuery):
     await callback.bot.send_message(chat_id=callback.from_user.id, text="Заповнить будь ласка форму для регістраціі:",
-                                    reply_markup=ReplyKeyboardMarkup(resize_keyboard=True).add(KeyboardButton("Замовити консультацію")))
+                                    reply_markup=ReplyKeyboardMarkup(resize_keyboard=True).add(
+                                        KeyboardButton("Замовити консультацію")))
+
 
 async def order_start(message: types.Message):
     await RoomOrder.name.set()

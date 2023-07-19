@@ -1,9 +1,9 @@
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardButton, InlineKeyboardMarkup
 
 
 def kb_menu():
-    kb = ReplyKeyboardMarkup(resize_keyboard=True, keyboard=[[
-        KeyboardButton('Меню')
+    kb = InlineKeyboardMarkup(inline_keyboard=[[
+        InlineKeyboardButton('Меню', callback_data='menu')
     ]])
 
     return kb
