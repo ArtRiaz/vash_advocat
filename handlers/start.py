@@ -21,4 +21,4 @@ async def cmd_menu(call: types.CallbackQuery):
 
 def register_handlers_start(dp: Dispatcher):
     dp.register_message_handler(cmd_start, commands=['start'])
-    dp.register_callback_query_handler(cmd_menu, Text(equals='Меню'))
+    dp.register_callback_query_handler(cmd_menu,  text='menu')
