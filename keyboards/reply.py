@@ -10,16 +10,16 @@ def kb_menu():
 
 
 def get_kb_menu():
-    kb = ReplyKeyboardMarkup(resize_keyboard=True, keyboard=[[
-        KeyboardButton('Послуги')
+    kb = InlineKeyboardMarkup(inline_keyboard=[[
+        InlineKeyboardButton('Послуги', callback_data="service"),
+        InlineKeyboardButton('Про мене', callback_data="about"),
+        InlineKeyboardButton('Питання', callback_data="questions")
+    ],
+
+     [
+        InlineKeyboardButton('Замовити консультацію', callback_data="consultasion")
     ], [
-        KeyboardButton('Про мене')
-    ], [
-        KeyboardButton('Питання')
-    ], [
-        KeyboardButton('Замовити консультацію')
-    ], [
-        KeyboardButton('Контакти')
+        InlineKeyboardButton('Контакти', callback_data="contact")
     ]
 
     ])
@@ -28,8 +28,8 @@ def get_kb_menu():
 
 
 def get_back():
-    kb = ReplyKeyboardMarkup(resize_keyboard=True, keyboard=[[
-        KeyboardButton('Назад в главное меню')
+    kb = InlineKeyboardMarkup(inline_keyboard=[[
+        InlineKeyboardButton('Назад у головне меню', callback_data='back_menu')
     ]])
 
     return kb

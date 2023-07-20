@@ -8,7 +8,11 @@ def ikb_contact():
         InlineKeyboardButton('Геолокація', callback_data='Геолокация')
     ], [
         InlineKeyboardButton('Контактний номер', callback_data='Вызов')
-    ]])
+    ],
+        [
+            InlineKeyboardButton("Назад у головне меню", callback_data='back_menu')
+        ]
+    ])
 
     return ikb
 
@@ -22,6 +26,8 @@ def ikb_question():
         InlineKeyboardButton("Що виконувати адвокат у процесі співпраці?", callback_data="4")
     ], [
         InlineKeyboardButton("Чи можливе абонентське обслуговування?", callback_data="5")
+    ], [
+        InlineKeyboardButton("Назад у головне меню", callback_data="back_menu")
     ]])
 
     return ikb
@@ -35,9 +41,21 @@ def back_quest():
     return ikb
 
 
+
+def back_contact():
+    ikb = InlineKeyboardMarkup(inline_keyboard=[[
+        InlineKeyboardButton('Назад', callback_data="cancel_contact")
+    ]])
+
+    return ikb
+
+
 def order():
     ikb = InlineKeyboardMarkup(inline_keyboard=[[
-        InlineKeyboardButton('Замовити консультацію', callback_data="order")
+        InlineKeyboardButton('Замовити консультацію', callback_data="consultasion")
+    ],
+    [
+        InlineKeyboardButton("Назад", callback_data="cancel_service_people")
     ]])
 
     return ikb

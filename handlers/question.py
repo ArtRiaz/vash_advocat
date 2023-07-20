@@ -7,10 +7,10 @@ from keyboards.inline_question import ikb_question, back_quest
 from aiogram.dispatcher.filters import Text
 
 
-async def questions(message: types.Message):
+async def questions(call: types.CallbackQuery):
     with open('question_adv.jpg', 'rb') as photo:
-        await bot.send_photo(chat_id=message.from_user.id, photo=photo, reply_markup=get_back())
-        await message.answer("Відповіді на ваші запитання:", reply_markup=ikb_question())
+        await call.bot.send_photo(chat_id=call.from_user.id, photo=photo)
+        await call.message.answer("Відповіді на ваші запитання:", reply_markup=ikb_question())
 
 
 async def question_1(callback: CallbackQuery):
@@ -73,19 +73,11 @@ async def inline_cancel(callback: CallbackQuery):
     await callback.message.answer("Відміна", reply_markup=ikb_question())
 
 
-
-
-
-
-
-
 def question_menu(dp: Dispatcher):
-    dp.register_message_handler(questions, Text(equals="Питання"))
+    dp.register_callback_query_handler(questions, text='questions')
     dp.register_callback_query_handler(question_1, text='1')
     dp.register_callback_query_handler(question_2, text='2')
     dp.register_callback_query_handler(question_3, text='3')
     dp.register_callback_query_handler(question_4, text='4')
     dp.register_callback_query_handler(question_4, text='5')
     dp.register_callback_query_handler(inline_cancel, text='cancel')
-    # dp.register_callback_query_handler(inline_contact, text='contact_bot')
-    # dp.register_callback_query_handler(inline_company, text='info_bot')

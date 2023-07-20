@@ -3,28 +3,37 @@ from aiogram import types, Dispatcher
 from create_bot import dp, bot
 from aiogram.dispatcher.filters import Text
 import asyncio
-from keyboards.reply import get_back
 from keyboards.inline_question import order
 
 
-async def service(messsage: types.Message):
-    with open('reu.jpg', 'rb') as photo:
-        markup = InlineKeyboardMarkup(row_width=2, inline_keyboard=[[
-            InlineKeyboardButton(text='Для людей', callback_data='people'),
+def markup():
+    ikb = InlineKeyboardMarkup(inline_keyboard=[
+        [
+            InlineKeyboardButton(text='Для людей', callback_data='people')
+        ],
+        [
             InlineKeyboardButton(text='Для юридичних осіб', callback_data='phis')
-        ]])
-        await bot.send_photo(chat_id=messsage.from_user.id, photo=photo,
-                             caption=f'<b>Мої послуги</b>\n'
-                                     '\n'
-                                     f'Працюю за всіма юридичними напрямками незалежно від складності',
-                             reply_markup=markup)
+        ],
+        [
+            InlineKeyboardButton(text="Назад у головне меню", callback_data='back_menu')
+        ]
+    ])
+    return ikb
 
+
+async def service(call: types.CallbackQuery):
+    with open('reu.jpg', 'rb') as photo:
+        await call.bot.send_photo(chat_id=call.from_user.id, photo=photo,
+                                  caption=f'<b>Мої послуги</b>\n'
+                                          '\n'
+                                          f'Працюю за всіма юридичними напрямками незалежно від складності',
+                                  reply_markup=markup())
 
 
 async def for_people(callback: CallbackQuery):
     await callback.message.answer("<b>Трудові суперечки</b>\n"
                                   "\n"
-                                  "Допоможу вам отримати компетентну юридичну консультацію з питань трудового права.", reply_markup=get_back())
+                                  "Допоможу вам отримати компетентну юридичну консультацію з питань трудового права.")
     await asyncio.sleep(2)
     await callback.message.answer("<b>Захист прав споживачів</b>\n"
                                   "\n"
@@ -117,7 +126,17 @@ async def for_phisic(callback: CallbackQuery):
                                   "для отримання професійної консультації та підтримки.", reply_markup=order())
 
 
+async def inline_cancel_service(call: CallbackQuery):
+    with open('reu.jpg', 'rb') as photo:
+        await call.bot.send_photo(chat_id=call.from_user.id, photo=photo,
+                                  caption=f'<b>Мої послуги</b>\n'
+                                          '\n'
+                                          f'Працюю за всіма юридичними напрямками незалежно від складності',
+                                  reply_markup=markup())
+
+
 def register_service(dp: Dispatcher):
-    dp.register_message_handler(service, Text(equals="Послуги"))
+    dp.register_callback_query_handler(service, text="service")
     dp.register_callback_query_handler(for_people, text='people')
     dp.register_callback_query_handler(for_phisic, text='phis')
+    dp.register_callback_query_handler(inline_cancel_service, text='cancel_service_people')

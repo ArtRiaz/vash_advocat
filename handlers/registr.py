@@ -1,3 +1,5 @@
+import asyncio
+
 from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.dispatcher import FSMContext
 from aiogram.types.message import ContentType
@@ -6,7 +8,7 @@ from create_bot import dp, bot
 from aiogram.dispatcher.filters import Text
 from keyboards.reply import kb_menu, get_kb_menu, get_back
 from aiogram.types import CallbackQuery
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardButton, InlineKeyboardMarkup
 
 
 class RoomOrder(StatesGroup):
@@ -16,17 +18,11 @@ class RoomOrder(StatesGroup):
     comentariy = State()
 
 
-async def order_middle(callback: CallbackQuery):
-    await callback.bot.send_message(chat_id=callback.from_user.id, text="Заповнить будь ласка форму для регістраціі:",
-                                    reply_markup=ReplyKeyboardMarkup(resize_keyboard=True).add(
-                                        KeyboardButton("Замовити консультацію")))
-
-
-async def order_start(message: types.Message):
+async def order_start(call: types.CallbackQuery):
     await RoomOrder.name.set()
-    await message.answer('<b>Залиште свої контакти і я звʼяжуся з Вами найближчим часом для обговорення всіх питань чи '
+    await call.message.answer('<b>Залиште свої контакти і я звʼяжуся з Вами найближчим часом для обговорення всіх питань чи '
                          'призначення зустрічі</b>')
-    await message.answer(f"Введить своє ім'я: ")
+    await call.message.answer(f"Введить своє ім'я: ")
 
 
 async def get_name(message: types.Message, state: FSMContext):
@@ -63,15 +59,16 @@ async def get_coment(message: types.Message, state: FSMContext):
                                                                   f" Ваше ім'я: {name}\n"
                                                                   f" Ваш номер телефону: {phone}\n"
                                                                   f"Ваш e-mail: {email}\n"
-                                                                  f"Коментар: {com}",
-                               reply_markup=get_back())
+                                                                  f"Коментар: {com}")
+        await bot.send_message(chat_id=message.from_user.id, text="Оплатити консультацію, чи внести передоплату,\n"
+                               " ви зможите за реквізитами картки: 42424242424242", reply_markup=get_back())
         await state.finish()
 
 
 def handlers_form(dp: Dispatcher):
-    dp.register_message_handler(order_start, Text(equals='Замовити консультацію'), state=None)
+    dp.register_callback_query_handler(order_start, text='consultasion', state=None)
     dp.register_message_handler(get_name, state=RoomOrder.name)
     dp.register_message_handler(get_phone, state=RoomOrder.phone)
     dp.register_message_handler(get_email, state=RoomOrder.email)
     dp.register_message_handler(get_coment, state=RoomOrder.comentariy)
-    dp.register_callback_query_handler(order_middle, text="order")
+
