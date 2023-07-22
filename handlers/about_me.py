@@ -1,5 +1,4 @@
 from aiogram import types, Dispatcher
-from create_bot import dp, bot
 import asyncio
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from keyboards.reply import get_back

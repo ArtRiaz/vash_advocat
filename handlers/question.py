@@ -1,5 +1,4 @@
 from aiogram.types import CallbackQuery
-from create_bot import bot, dp
 from aiogram import Dispatcher
 from keyboards.reply import get_back
 from aiogram import types, Dispatcher

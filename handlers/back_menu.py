@@ -1,5 +1,4 @@
 from aiogram import types, Dispatcher
-from create_bot import bot, dp
 from aiogram.dispatcher.filters import Text
 from handlers.start import get_kb_menu
 from aiogram.types import CallbackQuery

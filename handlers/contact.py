@@ -1,5 +1,4 @@
 from aiogram import types, Dispatcher
-from create_bot import bot, dp
 from aiogram.dispatcher.filters import Text
 from keyboards.inline_question import ikb_contact
 from keyboards.inline_question import back_contact

@@ -1,6 +1,5 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from aiogram import types, Dispatcher
-from create_bot import dp, bot
 from aiogram.dispatcher.filters import Text
 import asyncio
 from keyboards.inline_question import order
