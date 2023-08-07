@@ -7,7 +7,7 @@ from aiogram.dispatcher.filters import Text
 
 
 async def questions(call: types.CallbackQuery):
-    with open('question_adv.jpg', 'rb') as photo:
+    with open('questions_adv.jpg', 'rb') as photo:
         await call.bot.send_photo(chat_id=call.from_user.id, photo=photo)
         await call.message.answer("Відповіді на ваші запитання:", reply_markup=ikb_question())
 

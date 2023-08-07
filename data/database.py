@@ -8,7 +8,6 @@ from create_bot import load_config, POSTGRES_URL
 from typing import List
 import gino
 
-
 db = Gino()
 
 config = load_config()
@@ -43,6 +42,19 @@ class User(db.Model):
             self.id, self.full_name, self.username)
 
 
+class RegisterUser(db.Model):
+    __tablename__ = 'register'
+
+    id = Column(Integer, Sequence('user_id_seq'), primary_key=True)
+    user_id = Column(BigInteger)
+    name = Column(String(100))
+    phone = Column(String(100))
+    email = Column(String(100))
+    coment = Column(String(500))
+    register_time = Column(TIMESTAMP)
+    query: sql.Select
+
+
 class DBCommands:
 
     async def get_user(self, user_id):
@@ -60,6 +72,23 @@ class DBCommands:
         new_user.full_name = user.full_name
         await new_user.create()
         return new_user
+
+    async def show_users(self):
+        await db.set_bind(POSTGRES_URL)
+        users = await User.query.gino.all()
+
+        return users
+
+    async def show_registr_users(self):
+        await db.set_bind(POSTGRES_URL)
+        users = await RegisterUser.query.gino.all()
+
+        return users
+
+    async def get_all_user_ids(self):
+        users = await User.query.gino.all()  # Получаем всех пользователей из таблицы
+        user_ids = [user.user_id for user in users]
+        return user_ids
 
 
 async def create_db():

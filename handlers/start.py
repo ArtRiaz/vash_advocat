@@ -1,15 +1,17 @@
-from aiogram import types, Dispatcher
+from aiogram import types, Dispatcher, Bot
 from aiogram.dispatcher.filters import Text
 from keyboards.reply import kb_menu, get_kb_menu, get_back
 from data.database import DBCommands, create_db
 
+
 db = DBCommands()
+
+bot = Bot
 
 
 async def cmd_start(message: types.Message):
     with open('start_adv.jpg', 'rb') as photo:
         await create_db()
-
         await message.answer_photo(
             photo=photo,
             caption=f'<b> Вітаю Вас, {message.from_user.full_name}!\n </b>'

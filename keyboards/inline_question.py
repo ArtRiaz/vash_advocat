@@ -41,7 +41,6 @@ def back_quest():
     return ikb
 
 
-
 def back_contact():
     ikb = InlineKeyboardMarkup(inline_keyboard=[[
         InlineKeyboardButton('Назад', callback_data="cancel_contact")
@@ -54,8 +53,16 @@ def order():
     ikb = InlineKeyboardMarkup(inline_keyboard=[[
         InlineKeyboardButton('Замовити консультацію', callback_data="consultasion")
     ],
-    [
-        InlineKeyboardButton("Назад", callback_data="cancel_service_people")
+        [
+            InlineKeyboardButton("Назад", callback_data="cancel_service_people")
+        ]])
+
+    return ikb
+
+
+def back_admin_panel():
+    ikb = InlineKeyboardMarkup(inline_keyboard=[[
+        InlineKeyboardButton('Назад', callback_data="cancel_admin_menu")
     ]])
 
     return ikb
