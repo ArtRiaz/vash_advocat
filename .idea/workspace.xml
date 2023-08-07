@@ -26,6 +26,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2SMz9UfH6us73aWmGBipZ711scZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -39,6 +42,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -49,7 +53,7 @@
       <recent name="$PROJECT_DIR$/tg_bot" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Docker.Dockerfile">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="vash_advocat" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -72,6 +76,26 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildOnly" value="true" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.Dockerfile" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -204,6 +228,16 @@
       <workItem from="1691422417555" duration="59000" />
       <workItem from="1691422481296" duration="697000" />
       <workItem from="1691423224192" duration="342000" />
+      <workItem from="1691423817883" duration="4002000" />
+      <workItem from="1691429844479" duration="278000" />
+      <workItem from="1691430128978" duration="199000" />
+      <workItem from="1691430334759" duration="20000" />
+      <workItem from="1691430369047" duration="259000" />
+      <workItem from="1691430633789" duration="17000" />
+      <workItem from="1691430689150" duration="635000" />
+      <workItem from="1691431388446" duration="237000" />
+      <workItem from="1691431631969" duration="317000" />
+      <workItem from="1691431956866" duration="944000" />
     </task>
     <task id="LOCAL-00001" summary="+req">
       <created>1689001105143</created>
@@ -282,7 +316,31 @@
       <option name="project" value="LOCAL" />
       <updated>1691422178919</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="+req+mistaikes">
+      <option name="closed" value="true" />
+      <created>1691424148545</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1691424148545</updated>
+    </task>
+    <task id="LOCAL-00012" summary="+req+mistaikes">
+      <option name="closed" value="true" />
+      <created>1691428111589</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1691428111589</updated>
+    </task>
+    <task id="LOCAL-00013" summary="+req+mistaikes">
+      <option name="closed" value="true" />
+      <created>1691429318332</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1691429318332</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
