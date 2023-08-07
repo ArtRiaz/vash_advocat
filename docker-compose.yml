@@ -21,7 +21,6 @@ services:
     restart: always
     volumes:
       - .:/usr/src/app/bot
-    working_dir: "/usr/src/app/bot
     networks:
       - botnet
     depends_on:
