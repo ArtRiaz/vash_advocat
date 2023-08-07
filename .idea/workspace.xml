@@ -5,25 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bdfe01a-2f37-4ff6-b635-ad1a2c6ae146" name="Changes" comment="+req+mistaikes">
-      <change afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/questions_adv.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/admin_panel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/mailing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docker_install.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about_me.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/about_me.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/question.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/question.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/registr.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/registr.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keyboards/inline_question.py" beforeDir="false" afterPath="$PROJECT_DIR$/keyboards/inline_question.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/question_adv.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reu.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/reu.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sert1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sert2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sert3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/start_adv.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/start_adv.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/set_command_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/set_command_default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,6 +195,13 @@
       <workItem from="1691402479778" duration="836000" />
       <workItem from="1691403785858" duration="73000" />
       <workItem from="1691403864462" duration="347000" />
+      <workItem from="1691404424776" duration="2243000" />
+      <workItem from="1691414677462" duration="2542000" />
+      <workItem from="1691419823853" duration="168000" />
+      <workItem from="1691420034267" duration="23000" />
+      <workItem from="1691420092570" duration="43000" />
+      <workItem from="1691420155093" duration="326000" />
+      <workItem from="1691420600385" duration="368000" />
     </task>
     <task id="LOCAL-00001" summary="+req">
       <created>1689001105143</created>
@@ -264,7 +256,23 @@
       <option name="project" value="LOCAL" />
       <updated>1690049745530</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="+req+mistaikes">
+      <option name="closed" value="true" />
+      <created>1691413609061</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1691413609061</updated>
+    </task>
+    <task id="LOCAL-00009" summary="+req+mistaikes">
+      <option name="closed" value="true" />
+      <created>1691413844157</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1691413844157</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

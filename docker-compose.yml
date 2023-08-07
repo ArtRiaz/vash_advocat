@@ -1,4 +1,4 @@
-version: "3.1"
+version: "3.3"
 
 services:
   db:
@@ -14,14 +14,14 @@ services:
     volumes:
       - ./postgres:/var/lib/postgresql
 
-
   tgbot:
     container_name: bot
     build:
       context: .
     restart: always
     volumes:
-      - .:/src
+      - .:/usr/src/app/bot
+    working_dir: "/usr/src/app/bot
     networks:
       - botnet
     depends_on:
