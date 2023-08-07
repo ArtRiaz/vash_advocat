@@ -1,4 +1,4 @@
-version: "3.3"
+version: "3.1"
 
 services:
   db:
@@ -20,7 +20,7 @@ services:
       context: .
     restart: always
     volumes:
-      - .:/usr/src/app/bot
+      - .:/src
     networks:
       - botnet
     depends_on:
