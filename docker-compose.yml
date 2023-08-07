@@ -18,6 +18,7 @@ services:
     container_name: bot
     build:
       context: .
+    command: python main.py
     restart: always
     volumes:
       - .:/src

@@ -13,6 +13,8 @@ class DbConfig:
     database: str
 
 
+
+
 @dataclass
 class TgBot:
     token: str
@@ -46,7 +48,8 @@ def load_config(path: str = None):
             host=env.str('DB_HOST'),
             password=env.str('DB_PASS'),
             user=env.str('DB_USER'),
-            database=env.str('DB_DATABASE')
+            database=env.str('DB_DATABASE'),
+
         ),
         misc=Miscellaneous()
     )
@@ -55,4 +58,4 @@ def load_config(path: str = None):
 config = load_config()
 
 POSTGRES_URL = f"postgres://{config.db.user}:{config.db.password}@{config.db.host}/{config.db.database}"
-
+PG_PASSWORD = env.str("PG_PASSWORD")
