@@ -58,6 +58,4 @@ def load_config(path: str = None):
 config = load_config()
 
 POSTGRES_URL = f"postgres://{config.db.user}:{config.db.password}@{config.db.host}/{config.db.database}"
-env = Env()
-PG_PASSWORD = env("PG_PASSWORD")
-print(PG_PASSWORD)
+

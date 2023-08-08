@@ -55,7 +55,7 @@
       <recent name="$PROJECT_DIR$/tg_bot" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Dockerfile">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="vash_advocat" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -246,6 +246,18 @@
       <workItem from="1691434352240" duration="382000" />
       <workItem from="1691434813406" duration="1042000" />
       <workItem from="1691442849821" duration="601000" />
+      <workItem from="1691443459871" duration="646000" />
+      <workItem from="1691444170383" duration="67000" />
+      <workItem from="1691444256727" duration="353000" />
+      <workItem from="1691444619846" duration="18000" />
+      <workItem from="1691444646351" duration="152000" />
+      <workItem from="1691444805694" duration="911000" />
+      <workItem from="1691447022759" duration="461000" />
+      <workItem from="1691447540257" duration="127000" />
+      <workItem from="1691447673225" duration="428000" />
+      <workItem from="1691448505029" duration="585000" />
+      <workItem from="1691477838972" duration="1223000" />
+      <workItem from="1691479584112" duration="431000" />
     </task>
     <task id="LOCAL-00001" summary="+req">
       <created>1689001105143</created>
@@ -356,7 +368,23 @@
       <option name="project" value="LOCAL" />
       <updated>1691433113783</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="+req+mistaikes">
+      <option name="closed" value="true" />
+      <created>1691443472933</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1691443472933</updated>
+    </task>
+    <task id="LOCAL-00016" summary="+req+mistaikes">
+      <option name="closed" value="true" />
+      <created>1691444096800</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1691444096800</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,6 +407,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="+req+mistaikes" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/vash_advocat$main.coverage" NAME="main Coverage Results" MODIFIED="1691403037023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/vash_advocat$main.coverage" NAME="main Coverage Results" MODIFIED="1691444034514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
