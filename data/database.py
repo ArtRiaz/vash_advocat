@@ -90,6 +90,10 @@ class DBCommands:
         user_ids = [user.user_id for user in users]
         return user_ids
 
+    async def empty_cart(self):
+        register = await RegisterUser.delete.gino.status()
+
+        return register
 
 async def create_db():
     await db.set_bind(POSTGRES_URL)

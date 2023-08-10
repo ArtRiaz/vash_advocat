@@ -1,4 +1,5 @@
 import asyncio
+import pytz
 
 from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.dispatcher import FSMContext
@@ -11,7 +12,6 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardBut
 from create_bot import load_config
 from data.database import RegisterUser
 import datetime
-
 config = load_config()
 
 
@@ -54,7 +54,7 @@ async def get_phone(message: types.Message, state: FSMContext):
 
 
 async def get_email(message: types.Message, state: FSMContext):
-    if message.text == "@":
+    if "@" in message.text:
         email = message.text
         data = await state.get_data()
         register: RegisterUser = data.get("register")
@@ -88,7 +88,7 @@ async def get_coment(message: types.Message, state: FSMContext):
                                    reply_markup=get_back())
 
     await message.bot.send_message(chat_id=config.tg_bot.admin_ids,
-                                   text=f"Сьогодні {datetime.datetime.now()}\n"
+                                   text=f"Сьогодні {datetime.datetime.now(tz=pytz.timezone('Europe/Kiev'))}\n"
                                         f"Прийшов запит на консультацію\n"
                                         f"Ім'я: {register.name}\n"
                                         f"Номер телефону: {register.phone}\n"
@@ -99,8 +99,8 @@ async def get_coment(message: types.Message, state: FSMContext):
 
 
 def handlers_form(dp: Dispatcher):
-    dp.register_callback_query_handler(order_start, text='consultasion', state=None, user_id=config.tg_bot.admin_ids, )
-    dp.register_message_handler(get_name, state=RoomOrder.name, user_id=config.tg_bot.admin_ids)
-    dp.register_message_handler(get_phone, state=RoomOrder.phone, user_id=config.tg_bot.admin_ids)
-    dp.register_message_handler(get_email, state=RoomOrder.email, user_id=config.tg_bot.admin_ids)
-    dp.register_message_handler(get_coment, state=RoomOrder.comentariy, user_id=config.tg_bot.admin_ids)
+    dp.register_callback_query_handler(order_start, text='consultasion', state=None)
+    dp.register_message_handler(get_name, state=RoomOrder.name)
+    dp.register_message_handler(get_phone, state=RoomOrder.phone)
+    dp.register_message_handler(get_email, state=RoomOrder.email)
+    dp.register_message_handler(get_coment, state=RoomOrder.comentariy)

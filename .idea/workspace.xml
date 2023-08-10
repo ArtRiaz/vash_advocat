@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bdfe01a-2f37-4ff6-b635-ad1a2c6ae146" name="Changes" comment="+req+mistaikes" />
+    <list default="true" id="1bdfe01a-2f37-4ff6-b635-ad1a2c6ae146" name="Changes" comment="+req+mistaikes">
+      <change afterPath="$PROJECT_DIR$/bot.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docker_install.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/registr.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/registr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/admin_panel.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/admin_panel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/set_command_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/set_command_default.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -254,6 +264,36 @@
       <workItem from="1691477838972" duration="1223000" />
       <workItem from="1691479584112" duration="431000" />
       <workItem from="1691480791585" duration="2236000" />
+      <workItem from="1691491815448" duration="1002000" />
+      <workItem from="1691492834359" duration="2796000" />
+      <workItem from="1691495767845" duration="606000" />
+      <workItem from="1691500901191" duration="2000" />
+      <workItem from="1691501365287" duration="549000" />
+      <workItem from="1691502358922" duration="475000" />
+      <workItem from="1691503246982" duration="714000" />
+      <workItem from="1691504261829" duration="1040000" />
+      <workItem from="1691518317316" duration="932000" />
+      <workItem from="1691519959868" duration="902000" />
+      <workItem from="1691521666322" duration="645000" />
+      <workItem from="1691522439671" duration="1268000" />
+      <workItem from="1691523837355" duration="394000" />
+      <workItem from="1691524238596" duration="455000" />
+      <workItem from="1691524713733" duration="442000" />
+      <workItem from="1691525245551" duration="395000" />
+      <workItem from="1691583089447" duration="1116000" />
+      <workItem from="1691596753564" duration="59000" />
+      <workItem from="1691597074018" duration="43000" />
+      <workItem from="1691597347306" duration="44000" />
+      <workItem from="1691597485625" duration="57000" />
+      <workItem from="1691600871878" duration="357000" />
+      <workItem from="1691601262571" duration="1265000" />
+      <workItem from="1691604090093" duration="273000" />
+      <workItem from="1691604798212" duration="11000" />
+      <workItem from="1691604815660" duration="662000" />
+      <workItem from="1691668853348" duration="661000" />
+      <workItem from="1691669898905" duration="980000" />
+      <workItem from="1691671127670" duration="136000" />
+      <workItem from="1691671272155" duration="135000" />
     </task>
     <task id="LOCAL-00001" summary="+req">
       <created>1689001105143</created>
@@ -388,7 +428,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691480801109</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="+req+mistaikes">
+      <option name="closed" value="true" />
+      <created>1691492156690</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1691492156690</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

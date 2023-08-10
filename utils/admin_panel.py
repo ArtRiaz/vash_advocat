@@ -54,7 +54,15 @@ async def show_contacts(call: types.CallbackQuery):
                 email=contact.email,
                 register_time=datetime.now()
             ))
-    await call.message.answer("Щоб повернутись нажміть назад", reply_markup=back_admin_panel())
+    await call.message.answer("Щоб повернутись нажміть назад", reply_markup=InlineKeyboardMarkup(inline_keyboard=[[
+        InlineKeyboardButton("Очистити список", callback_data="empty_list")
+    ], [
+        InlineKeyboardButton('Назад', callback_data="cancel_admin_menu")
+    ]]))
+
+async def empty_my_list(call: types.CallbackQuery):
+    await db.empty_cart()
+    await call.message.answer("Список видаленний")
 
 
 async def cancel_admin_panel(call: types.CallbackQuery):
@@ -67,3 +75,4 @@ def register_handlers_admin(dp: Dispatcher):
     dp.register_callback_query_handler(show_list, text='list_users', user_id=config.tg_bot.admin_ids)
     dp.register_callback_query_handler(show_contacts, text='list_contacts', user_id=config.tg_bot.admin_ids)
     dp.register_callback_query_handler(cancel_admin_panel, text="cancel_admin_menu", user_id=config.tg_bot.admin_ids)
+    dp.register_callback_query_handler(empty_my_list, text="empty_list", user_id=config.tg_bot.admin_ids)
