@@ -16,7 +16,9 @@ def menu_admin():
         InlineKeyboardButton('Розсилання', callback_data='send')).add(
         InlineKeyboardButton('Список вхідних користувачів',
                              callback_data='list_users')).add(
-        InlineKeyboardButton("Список контактів", callback_data='list_contacts'))
+        InlineKeyboardButton("Список заявок на консультацию", callback_data='list_contacts')).add(
+        InlineKeyboardButton("Інструкція для адміна", callback_data="instr_admin")
+    )
     return markup
 
 
@@ -60,6 +62,7 @@ async def show_contacts(call: types.CallbackQuery):
         InlineKeyboardButton('Назад', callback_data="cancel_admin_menu")
     ]]))
 
+
 async def empty_my_list(call: types.CallbackQuery):
     await db.empty_cart()
     await call.message.answer("Список видаленний")
@@ -70,9 +73,42 @@ async def cancel_admin_panel(call: types.CallbackQuery):
     await call.message.answer("Відміна", reply_markup=menu_admin())
 
 
+async def instruct_menu(call: types.CallbackQuery):
+    await call.message.answer("Виберіть категорію для інструкцій: ",
+                              reply_markup=InlineKeyboardMarkup(inline_keyboard=[[
+                                  InlineKeyboardButton("Інструкція розсилання", callback_data="inst_mail")
+                              ], [
+                                  InlineKeyboardButton("Інструкція Список вхідних користувачів",
+                                                       callback_data="inst_users")
+                              ], [
+                                  InlineKeyboardButton("Інструкція Список заявок на консультацию",
+                                                       callback_data="inst_contact")
+                              ], [
+                                  InlineKeyboardButton('Назад', callback_data="cancel_admin_menu")
+                              ]]))
+
+
+async def istr_mail(call: types.CallbackQuery):
+    with open("mail.mp4", "r") as file:
+        await call.message.answer_video(video=file)
+
+
+async def istr_list_users(call: types.CallbackQuery):
+    await call.bot.send_video(chat_id=call.from_user.id,
+                              video="BAACAgIAAxkBAAMZZN02mohvz5AL_7EIebZ8PL9A2BIAAs04AALcaelKO5SJLKfCpPYwBA")
+
+
+async def istr_list_registr(call: types.CallbackQuery):
+    await call.message.answer_video(video="BAACAgIAAxkBAAMcZN05PoPIJvpmW-m7UmvFTGqEb6sAAts4AALcaelKn2o6JbZ4w2IwBA")
+
+
 def register_handlers_admin(dp: Dispatcher):
     dp.register_message_handler(admin, Text(equals='Admin'), user_id=config.tg_bot.admin_ids)
     dp.register_callback_query_handler(show_list, text='list_users', user_id=config.tg_bot.admin_ids)
     dp.register_callback_query_handler(show_contacts, text='list_contacts', user_id=config.tg_bot.admin_ids)
     dp.register_callback_query_handler(cancel_admin_panel, text="cancel_admin_menu", user_id=config.tg_bot.admin_ids)
     dp.register_callback_query_handler(empty_my_list, text="empty_list", user_id=config.tg_bot.admin_ids)
+    dp.register_callback_query_handler(instruct_menu, text="instr_admin", user_id=config.tg_bot.admin_ids)
+    dp.register_callback_query_handler(istr_mail, text="inst_mail", user_id=config.tg_bot.admin_ids)
+    dp.register_callback_query_handler(istr_list_users, text="inst_users", user_id=config.tg_bot.admin_ids)
+    dp.register_callback_query_handler(istr_list_registr, text='inst_contact', user_id=config.tg_bot.admin_ids)

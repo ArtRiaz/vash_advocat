@@ -45,7 +45,7 @@ async def next_time(callback: CallbackQuery, state: FSMContext):
     await state.finish()
 
     all_user_ids = await db.get_all_user_ids()
-    print(all_user_ids)
+    print(all_user_id)
     for user in all_user_ids:
         await dp.bot.send_message(chat_id=user, text=text)
         await asyncio.sleep(0.33)

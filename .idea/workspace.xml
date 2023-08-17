@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bdfe01a-2f37-4ff6-b635-ad1a2c6ae146" name="Changes" comment="+req+mistaikes">
-      <change afterPath="$PROJECT_DIR$/bot.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.ylm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docker_install.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/registr.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/registr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/admin_panel.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/admin_panel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/set_command_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/set_command_default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/mailing.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/mailing.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,6 +292,41 @@
       <workItem from="1691669898905" duration="980000" />
       <workItem from="1691671127670" duration="136000" />
       <workItem from="1691671272155" duration="135000" />
+      <workItem from="1691671727676" duration="2507000" />
+      <workItem from="1691676236242" duration="78000" />
+      <workItem from="1691676341130" duration="1000" />
+      <workItem from="1691676457154" duration="83000" />
+      <workItem from="1691676631816" duration="62000" />
+      <workItem from="1691677253005" duration="18000" />
+      <workItem from="1691681257156" duration="287000" />
+      <workItem from="1691681551230" duration="997000" />
+      <workItem from="1691682619668" duration="199000" />
+      <workItem from="1691756824878" duration="162000" />
+      <workItem from="1691763983124" duration="3498000" />
+      <workItem from="1691768080772" duration="716000" />
+      <workItem from="1691851220681" duration="20000" />
+      <workItem from="1691859165670" duration="14000" />
+      <workItem from="1691863958802" duration="132000" />
+      <workItem from="1691866519221" duration="4000" />
+      <workItem from="1691869748641" duration="20000" />
+      <workItem from="1692101030605" duration="18000" />
+      <workItem from="1692187889450" duration="1514000" />
+      <workItem from="1692212324372" duration="307000" />
+      <workItem from="1692212636150" duration="38000" />
+      <workItem from="1692213047198" duration="123000" />
+      <workItem from="1692214467138" duration="27000" />
+      <workItem from="1692218285001" duration="1000" />
+      <workItem from="1692218411111" duration="425000" />
+      <workItem from="1692219062696" duration="431000" />
+      <workItem from="1692219736773" duration="953000" />
+      <workItem from="1692220976765" duration="964000" />
+      <workItem from="1692222626664" duration="1138000" />
+      <workItem from="1692224142284" duration="400000" />
+      <workItem from="1692224733355" duration="174000" />
+      <workItem from="1692273069479" duration="1024000" />
+      <workItem from="1692274161712" duration="1082000" />
+      <workItem from="1692275382306" duration="98000" />
+      <workItem from="1692276802067" duration="5439000" />
     </task>
     <task id="LOCAL-00001" summary="+req">
       <created>1689001105143</created>
@@ -436,7 +469,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691492156690</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="+req+mistaikes">
+      <option name="closed" value="true" />
+      <created>1691674578583</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1691674578583</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,6 +500,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="+req+mistaikes" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/vash_advocat$main.coverage" NAME="main Coverage Results" MODIFIED="1691444034514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/vash_advocat$main.coverage" NAME="main Coverage Results" MODIFIED="1692223580011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
