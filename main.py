@@ -19,11 +19,6 @@ config = load_config()
 def register_all_middleware(dp):
     dp.setup_middleware(Anti_time())
 
-
-# def register_all_fillters(dp):
-#     dp.filters_factory.bind(AdminFilter)
-
-
 def register_all_handlers(dp):
     start.register_handlers_start(dp)
     services.register_service(dp)
@@ -55,7 +50,6 @@ async def main():
     # я делаю => bot.get("config")
 
     register_all_middleware(dp)
-    #    register_all_fillters(dp)
     register_all_handlers(dp)
 
     try:
