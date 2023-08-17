@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1bdfe01a-2f37-4ff6-b635-ad1a2c6ae146" name="Changes" comment="+req+mistaikes+mp4" />
+    <list default="true" id="1bdfe01a-2f37-4ff6-b635-ad1a2c6ae146" name="Changes" comment="+req+mistaikes+mp4">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -324,6 +328,8 @@
       <workItem from="1692289382747" duration="112000" />
       <workItem from="1692290016385" duration="165000" />
       <workItem from="1692290290188" duration="2311000" />
+      <workItem from="1692292640927" duration="1164000" />
+      <workItem from="1692293986013" duration="288000" />
     </task>
     <task id="LOCAL-00001" summary="+req">
       <created>1689001105143</created>
@@ -546,7 +552,31 @@
       <option name="project" value="LOCAL" />
       <updated>1692292451744</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="+req+mistaikes+mp4">
+      <option name="closed" value="true" />
+      <created>1692292723541</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1692292723541</updated>
+    </task>
+    <task id="LOCAL-00030" summary="+req+mistaikes+mp4">
+      <option name="closed" value="true" />
+      <created>1692292924191</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1692292924191</updated>
+    </task>
+    <task id="LOCAL-00031" summary="+req+mistaikes+mp4">
+      <option name="closed" value="true" />
+      <created>1692293332537</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1692293332537</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
