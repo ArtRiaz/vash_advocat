@@ -88,19 +88,6 @@ async def instruct_menu(call: types.CallbackQuery):
                               ]]))
 
 
-async def istr_mail(call: types.CallbackQuery):
-    with open("mail.mp4", "rb") as file:
-        await call.message.answer_video(video=file)
-
-
-async def istr_list_users(call: types.CallbackQuery):
-    with open("list_user", "rb") as file:
-        await call.message.answer_video(video=file)
-
-
-async def istr_list_registr(call: types.CallbackQuery):
-    with open("list_registr", "rb") as file:
-        await call.message.answer_video(video=file)
 
 
 def register_handlers_admin(dp: Dispatcher):
@@ -110,6 +97,4 @@ def register_handlers_admin(dp: Dispatcher):
     dp.register_callback_query_handler(cancel_admin_panel, text="cancel_admin_menu", user_id=config.tg_bot.admin_ids)
     dp.register_callback_query_handler(empty_my_list, text="empty_list", user_id=config.tg_bot.admin_ids)
     dp.register_callback_query_handler(instruct_menu, text="instr_admin", user_id=config.tg_bot.admin_ids)
-    dp.register_callback_query_handler(istr_mail, text="inst_mail", user_id=config.tg_bot.admin_ids)
-    dp.register_callback_query_handler(istr_list_users, text="inst_users", user_id=config.tg_bot.admin_ids)
-    dp.register_callback_query_handler(istr_list_registr, text='inst_contact', user_id=config.tg_bot.admin_ids)
+
