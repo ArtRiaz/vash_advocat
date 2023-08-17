@@ -89,17 +89,18 @@ async def instruct_menu(call: types.CallbackQuery):
 
 
 async def istr_mail(call: types.CallbackQuery):
-    with open("mail.mp4", "r") as file:
+    with open("mail.mp4", "rb") as file:
         await call.message.answer_video(video=file)
 
 
 async def istr_list_users(call: types.CallbackQuery):
-    await call.bot.send_video(chat_id=call.from_user.id,
-                              video="BAACAgIAAxkBAAMZZN02mohvz5AL_7EIebZ8PL9A2BIAAs04AALcaelKO5SJLKfCpPYwBA")
+    with open("list_user", "rb") as file:
+        await call.message.answer_video(video=file)
 
 
 async def istr_list_registr(call: types.CallbackQuery):
-    await call.message.answer_video(video="BAACAgIAAxkBAAMcZN05PoPIJvpmW-m7UmvFTGqEb6sAAts4AALcaelKn2o6JbZ4w2IwBA")
+    with open("list_registr", "rb") as file:
+        await call.message.answer_video(video=file)
 
 
 def register_handlers_admin(dp: Dispatcher):
