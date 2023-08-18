@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bdfe01a-2f37-4ff6-b635-ad1a2c6ae146" name="Changes" comment="+req+mistaikes+mp4">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/admin_panel.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/admin_panel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/mailing.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/mailing.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,6 +331,21 @@
       <workItem from="1692290290188" duration="2311000" />
       <workItem from="1692292640927" duration="1164000" />
       <workItem from="1692293986013" duration="288000" />
+      <workItem from="1692294382060" duration="761000" />
+      <workItem from="1692295355007" duration="295000" />
+      <workItem from="1692295800611" duration="4245000" />
+      <workItem from="1692300815171" duration="212000" />
+      <workItem from="1692301034347" duration="3758000" />
+      <workItem from="1692306766745" duration="131000" />
+      <workItem from="1692307363732" duration="288000" />
+      <workItem from="1692308912369" duration="4070000" />
+      <workItem from="1692313401209" duration="3074000" />
+      <workItem from="1692317763362" duration="7000" />
+      <workItem from="1692353992172" duration="5757000" />
+      <workItem from="1692360144844" duration="273000" />
+      <workItem from="1692379945050" duration="2868000" />
+      <workItem from="1692383219437" duration="72000" />
+      <workItem from="1692383318748" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="+req">
       <created>1689001105143</created>
@@ -576,7 +592,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692293332537</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="+req+mistaikes+mp4">
+      <option name="closed" value="true" />
+      <created>1692294466907</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1692294466907</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -600,6 +624,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="+req+mistaikes+mp4" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/vash_advocat$main.coverage" NAME="main Coverage Results" MODIFIED="1692290031341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/vash_advocat$main.coverage" NAME="main Coverage Results" MODIFIED="1692381966547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

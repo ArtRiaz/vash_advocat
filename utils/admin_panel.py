@@ -88,10 +88,15 @@ async def instruct_menu(call: types.CallbackQuery):
                               ]]))
 
 
-async def instr_mail(call: types.CallbackQuery):
-    with open("test.mp4", "rb") as file:
-        await call.message.answer_video(video=file)
+async def inst_send(call: types.CallbackQuery):
+    await call.message.answer("Щоб побачити відео нажміть на посилання: https://youtu.be/MmbtKsLeSRQ")
 
+async def inst_users(call: types.CallbackQuery):
+    await call.message.answer("Щоб побачити відео нажміть на посилання: https://fex.net/ru/s/xvce4os")
+
+
+async def inst_registr(call: types.CallbackQuery):
+    await call.message.answer("Щоб побачити відео нажміть на посилання: https://fex.net/ru/s/kpkl6zm")
 
 def register_handlers_admin(dp: Dispatcher):
     dp.register_message_handler(admin, Text(equals='Admin'), user_id=config.tg_bot.admin_ids)
@@ -100,3 +105,6 @@ def register_handlers_admin(dp: Dispatcher):
     dp.register_callback_query_handler(cancel_admin_panel, text="cancel_admin_menu", user_id=config.tg_bot.admin_ids)
     dp.register_callback_query_handler(empty_my_list, text="empty_list", user_id=config.tg_bot.admin_ids)
     dp.register_callback_query_handler(instruct_menu, text="instr_admin", user_id=config.tg_bot.admin_ids)
+    dp.register_callback_query_handler(inst_send, text="inst_mail")
+    dp.register_callback_query_handler(inst_users, text="inst_users")
+    dp.register_callback_query_handler(inst_registr, text="inst_contact")

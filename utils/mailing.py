@@ -40,12 +40,12 @@ async def mailing_text(message: types.Message, state: FSMContext):
 
 
 async def next_time(callback: CallbackQuery, state: FSMContext):
+    all_user_ids = await db.get_all_user_ids()
+
     data = await state.get_data()
     text = data.get('text')
     await state.finish()
 
-    all_user_ids = await db.get_all_user_ids()
-    print(all_user_id)
     for user in all_user_ids:
         await dp.bot.send_message(chat_id=user, text=text)
         await asyncio.sleep(0.33)
@@ -71,13 +71,13 @@ async def mailing_send(message: types.Message, state: FSMContext):
 
 
 async def start_next(callback: CallbackQuery, state: FSMContext):
+    all_user_ids = await db.get_all_user_ids()
+
     data = await state.get_data()
     text = data.get('text')
     photo = data.get('photo')
     await state.finish()
 
-    all_user_ids = await db.get_all_user_ids()
-    print(all_user_ids)
     for user in all_user_ids:
         await dp.bot.send_photo(chat_id=user, photo=photo, caption=text)
         await asyncio.sleep(0.33)
@@ -99,6 +99,7 @@ async def quit_send(callback: CallbackQuery, state: FSMContext):
 def register_handler_mailing(dp: Dispatcher):
     dp.register_callback_query_handler(send_all, text='send', user_id=config.tg_bot.admin_ids)
     dp.register_message_handler(mailing_text, state=Mailing.Text, user_id=config.tg_bot.admin_ids)
+    dp.register_callback_query_handler(next_time, text='next', state=Mailing.state, user_id=config.tg_bot.admin_ids)
     dp.register_callback_query_handler(add_photo, text='add_photo', state=Mailing.state,
                                        user_id=config.tg_bot.admin_ids)
     dp.register_message_handler(mailing_send, state=Mailing.photo, content_types=types.ContentType.PHOTO,
@@ -108,4 +109,4 @@ def register_handler_mailing(dp: Dispatcher):
                                        state=[Mailing.Text, Mailing.photo, Mailing.state],
                                        user_id=config.tg_bot.admin_ids)
     dp.register_callback_query_handler(start_next, text='next', state=Mailing.photo, user_id=config.tg_bot.admin_ids)
-    dp.register_callback_query_handler(next_time, text='next', state=Mailing.state, user_id=config.tg_bot.admin_ids)
+
