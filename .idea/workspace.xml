@@ -7,6 +7,9 @@
     <list default="true" id="1bdfe01a-2f37-4ff6-b635-ad1a2c6ae146" name="Changes" comment="+req+mistaikes+mp4">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/registr.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/registr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/support.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/admin_panel.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/admin_panel.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/mailing.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/mailing.py" afterDir="false" />
     </list>
@@ -24,6 +27,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -346,6 +350,48 @@
       <workItem from="1692379945050" duration="2868000" />
       <workItem from="1692383219437" duration="72000" />
       <workItem from="1692383318748" duration="12000" />
+      <workItem from="1692383404901" duration="3631000" />
+      <workItem from="1692389301437" duration="19000" />
+      <workItem from="1692453340314" duration="279000" />
+      <workItem from="1692553570606" duration="32000" />
+      <workItem from="1692553873012" duration="14000" />
+      <workItem from="1693226194008" duration="90000" />
+      <workItem from="1693226374168" duration="55000" />
+      <workItem from="1693226465206" duration="17000" />
+      <workItem from="1693226640062" duration="14000" />
+      <workItem from="1693226783525" duration="16000" />
+      <workItem from="1693338113516" duration="8000" />
+      <workItem from="1693339234837" duration="13000" />
+      <workItem from="1693339480842" duration="6000" />
+      <workItem from="1693339730796" duration="40000" />
+      <workItem from="1693339916949" duration="53000" />
+      <workItem from="1693340223400" duration="52000" />
+      <workItem from="1693502052316" duration="35000" />
+      <workItem from="1694968401844" duration="111000" />
+      <workItem from="1694968553524" duration="14000" />
+      <workItem from="1695564627508" duration="22000" />
+      <workItem from="1695564758251" duration="29000" />
+      <workItem from="1695565332518" duration="18000" />
+      <workItem from="1695565623807" duration="10000" />
+      <workItem from="1695565729805" duration="25000" />
+      <workItem from="1695565945022" duration="36000" />
+      <workItem from="1695566336837" duration="124000" />
+      <workItem from="1695566629487" duration="76000" />
+      <workItem from="1695567603959" duration="8000" />
+      <workItem from="1695567835825" duration="91000" />
+      <workItem from="1695568579680" duration="56000" />
+      <workItem from="1695569746369" duration="20000" />
+      <workItem from="1695572101556" duration="52000" />
+      <workItem from="1695572880541" duration="19000" />
+      <workItem from="1695575254264" duration="28000" />
+      <workItem from="1695575972909" duration="80000" />
+      <workItem from="1698828856501" duration="743000" />
+      <workItem from="1698832104373" duration="289000" />
+      <workItem from="1698834185002" duration="387000" />
+      <workItem from="1699379520882" duration="203000" />
+      <workItem from="1699386874587" duration="82000" />
+      <workItem from="1699387003178" duration="42000" />
+      <workItem from="1699387079443" duration="2174000" />
     </task>
     <task id="LOCAL-00001" summary="+req">
       <created>1689001105143</created>
@@ -600,7 +646,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692294466907</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="+req+mistaikes+mp4">
+      <option name="closed" value="true" />
+      <created>1692387958311</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1692387958311</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -624,6 +678,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="+req+mistaikes+mp4" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/vash_advocat$main.coverage" NAME="main Coverage Results" MODIFIED="1692381966547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/vash_advocat$main.coverage" NAME="main Coverage Results" MODIFIED="1699389534936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

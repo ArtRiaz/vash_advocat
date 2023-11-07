@@ -21,9 +21,12 @@ class Mailing(StatesGroup):
     state = State()
     photo = State()
 
+async def cancel(message: types.Message, state: FSMContext):
+    await message.answer("Ви відмінили введення текста")
+    await state.reset_state()
 
 async def send_all(call: types.CallbackQuery):
-    await call.message.answer(f'Введіть текст розсилки:')
+    await call.message.answer(f'Введіть текст розсилки або натисніть /cancel:')
     await Mailing.Text.set()
 
 
@@ -97,16 +100,14 @@ async def quit_send(callback: CallbackQuery, state: FSMContext):
 
 
 def register_handler_mailing(dp: Dispatcher):
-    dp.register_callback_query_handler(send_all, text='send', user_id=config.tg_bot.admin_ids)
-    dp.register_message_handler(mailing_text, state=Mailing.Text, user_id=config.tg_bot.admin_ids)
-    dp.register_callback_query_handler(next_time, text='next', state=Mailing.state, user_id=config.tg_bot.admin_ids)
-    dp.register_callback_query_handler(add_photo, text='add_photo', state=Mailing.state,
-                                       user_id=config.tg_bot.admin_ids)
-    dp.register_message_handler(mailing_send, state=Mailing.photo, content_types=types.ContentType.PHOTO,
-                                user_id=config.tg_bot.admin_ids)
-    dp.register_message_handler(no_photo, state=Mailing.photo, user_id=config.tg_bot.admin_ids)
+    dp.register_message_handler(cancel, commands=["cancel"], state=Mailing)
+    dp.register_callback_query_handler(send_all, text='send')
+    dp.register_message_handler(mailing_text, state=Mailing.Text)
+    dp.register_callback_query_handler(next_time, text='next', state=Mailing.state)
+    dp.register_callback_query_handler(add_photo, text='add_photo', state=Mailing.state)
+    dp.register_message_handler(mailing_send, state=Mailing.photo, content_types=types.ContentType.PHOTO)
+    dp.register_message_handler(no_photo, state=Mailing.photo)
     dp.register_callback_query_handler(quit_send, text='quit',
-                                       state=[Mailing.Text, Mailing.photo, Mailing.state],
-                                       user_id=config.tg_bot.admin_ids)
-    dp.register_callback_query_handler(start_next, text='next', state=Mailing.photo, user_id=config.tg_bot.admin_ids)
+                                       state=[Mailing.Text, Mailing.photo, Mailing.state])
+    dp.register_callback_query_handler(start_next, text='next', state=Mailing.photo)
 

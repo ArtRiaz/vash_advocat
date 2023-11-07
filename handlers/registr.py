@@ -21,13 +21,16 @@ class RoomOrder(StatesGroup):
     email = State()
     comentariy = State()
 
+async def cancel(message: types.Message, state: FSMContext):
+    await message.answer("Ви відмінили регістрацію")
+    await state.reset_state()
 
 async def order_start(call: types.CallbackQuery):
     await RoomOrder.name.set()
     await call.message.answer(
         '<b>Залиште свої контакти і я звʼяжуся з Вами найближчим часом для обговорення всіх питань чи '
         'призначення зустрічі</b>')
-    await call.message.answer(f"Введить своє ім'я: ")
+    await call.message.answer(f"Введить своє ім'я або нажміть /cancel")
 
 
 async def get_name(message: types.Message, state: FSMContext):
@@ -36,7 +39,7 @@ async def get_name(message: types.Message, state: FSMContext):
     register.name = name
     await RoomOrder.next()
     await state.update_data(register=register)
-    await message.reply("Введіть свій контактний номер телефону: ")
+    await message.reply("Введіть свій контактний номер телефону або нажміть /cancel")
 
 
 async def get_phone(message: types.Message, state: FSMContext):
@@ -48,7 +51,7 @@ async def get_phone(message: types.Message, state: FSMContext):
         await state.update_data(register=register)
         await RoomOrder.next()
         await message.answer("Введиіть свій e-mail:\n"
-                             "Якщо ви немаєте email напишить @ ")
+                             "Якщо ви немаєте email напишить @ або нажміть /cancel")
     else:
         await message.answer("Введить вірний номер")
 
@@ -61,7 +64,7 @@ async def get_email(message: types.Message, state: FSMContext):
         register.email = email
         await state.update_data(register=register)
         await RoomOrder.next()
-        await message.answer("Короткий коментар: ")
+        await message.answer("Короткий коментар або нажміть /cancel ")
     else:
         await message.answer("Введить вірний email, чи напишить @ ")
 
@@ -84,7 +87,7 @@ async def get_coment(message: types.Message, state: FSMContext):
 
     await message.bot.send_message(chat_id=message.from_user.id,
                                    text="Оплатити консультацію, чи внести передоплату,\n"
-                                        " ви зможите за реквізитами картки: 42424242424242",
+                                        " ви зможите за реквізитами картки: <b>PrivatBank: 5168745611616886</b>",
                                    reply_markup=get_back())
 
     await message.bot.send_message(chat_id=config.tg_bot.admin_ids,
@@ -99,6 +102,7 @@ async def get_coment(message: types.Message, state: FSMContext):
 
 
 def handlers_form(dp: Dispatcher):
+    dp.register_message_handler(cancel, commands=["cancel"], state=RoomOrder)
     dp.register_callback_query_handler(order_start, text='consultasion', state=None)
     dp.register_message_handler(get_name, state=RoomOrder.name)
     dp.register_message_handler(get_phone, state=RoomOrder.phone)
